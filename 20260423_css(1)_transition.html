@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transition</title>
+</head>
+<style>
+    div{
+        width: 100px;
+        height: 100px;
+        background: deepskyblue;
+        margin: 10px;
+    }
+    .d1{
+        transition-duration: 1s; /*1초만에 이동해라*/
+        /*transition-delay: 1s; !*1초뒤에 동작해라*!*/
+        /*변경되는 부드러움 정도(시작할 때 부드럽게 시작하기 등)*/
+        trasition-timing-function : linear; /*일정한 속도로*/
+    }
+    .d1:hover{
+        transform: translateX(100px);
+    }
+    .d2{
+        background-color: floralwhite;
+        border-radius: 50%;
+        border: 5px solid black;
+        border-top-color: lemonchiffon;
+        border-bottom-color: lightslategray;
+        border-left-color: coral;
+        border-right-color: aquamarine;
+    }
+    .d2:hover{
+        transform: scale(200%);
+        transition-duration: 1s;
+        transform: translateX(200px) rotate(360deg);
+        /*순서가 중요하다. 가면서 돌아라, 돌면서 가라*/
+    }
+    .d3{
+        background-color: burlywood;
+        transition-duration: 1s;
+        transition-property: background-color;
+    /*    transition 할 항목을 지정할 수 있다.  */
+    }
+    .d3:hover{
+        transform: translateX(40%);
+        background-color: aquamarine;
+    }
+    .d4{
+        transition-duration: 1s;
+        transition-timing-function: linear;
+    }
+    .d4:hover{
+        transform: scale(2);
+    }
+</style>
+<body>
+    <div class="d1"></div>
+    <div class="d2"></div>
+    <div class="d3"></div>
+    <div class="d4"></div>
+
+</body>
+</html>
