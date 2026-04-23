@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>display</title>
+
+</head>
+<style>
+
+    div, span{
+        width: 200px;
+        height: 100px;
+        border: 1px solid black;
+        background-color: beige;
+    }
+    div{
+        display: inline;
+    /* display-inline을 하면 span이랑 똑같은 형태가 된다. inline 요소라는 것은 width와 height가 적용이 되지 않는다. 콘텐츠 영역 크기만 차지하게 되는 것이다. 그래서 width와 height를 넣어도 사라지게 된다. 또한 inline 요소에서 margin은 상하는 적용이 되지 않고 좌우만 적용이 된다.*/
+    /* 이는 글자처럼 판단하기 때문인데, text-align: center 하면 중앙으로 가는 것이다. */
+        margin: 100px; /*inline 요소에서 좌우만 100px 띄우는 것*/
+    }
+    span{
+        display: inline-block;
+    /* inline 속성과 block 속성을 모두 갖는 것. -> width, height, margin 전부 가능하며 text-align: center도 가능하다(글자처럼 취급)*/
+    /* 자신의 width, height 부분 영역을 가지게 된다. */
+    }
+    li{
+        list-style: none; /*불릿을 삭제시키는 코드*/
+        display: inline-block;
+        background-color: black;
+        width: 100px;
+        text-align: center;
+        border-radius: 20px;
+    }
+    li > a{
+        color: white;
+        text-decoration: none;
+        /*width: 150px; a 태그는 width를 안먹음 */
+        display: inline-block;
+        width: inherit; /*inherit 부모태그로부터 물려받으세요. : 부모태그와 비율과 같게하는 것이 나중에 수정하기 편하다. width는 inherit보다 100%로 더 많이 쓴다.*/
+        padding: 10px 0px;
+        CURSOR: pointer;
+        &:hover{
+            background-color: coral;
+            border-radius: 20px;
+        }
+    }
+
+
+</style>
+<body>
+    <div>DIV1</div>
+    <div>DIV2</div>
+    <hr>
+    <span>SPAN1</span>
+    <span>SPAN2</span>
+
+    <table>
+        <tr><td>table => display: table 속성을 가진다.</td></tr>
+    </table>
+<!-- table은 기본 display 설정을 가진다.-->
+    <ul>
+        <li>Li => display: list-item 속성을 가진다.</li>
+    </ul>
+<!--ul 자체는 block 성격을 가지며, li는 list-item 성격을 가진다. list-item은 위아래로 이동하는 속성을 지닌다.-->
+
+    <hr>
+    <ul>
+        <li>
+            <a href="https://www.naver.com">HTML</a>
+        </li>
+        <li>
+            <a href="#">CSS</a>
+        </li>
+        <li>
+            <a href="#">JavaScript</a>
+        </li>
+    </ul>
+
+
+
+</body>
+</html>

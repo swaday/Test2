@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*body{*/
+        /*    margin: unset;*/
+        /*}*/
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 300px
+        }
+        #box1{
+            width: 400px;
+            height: 400px;
+            background-color: aquamarine;
+            margin: 20px auto;
+        /* margin을 auto로 두면 텍스트 박스가 중앙정렬이 된다. 원리 : 양옆 여백을 똑같이 만들기 때문 */
+        /* 이 방법은 width가 있어야만 가능하다. */
+            text-align: center;
+            border-radius: 0px 100px 0px 0px
+        /* 라운드 모서리 : 최근 웹에서는 별로 쓰지 않는 편이다. */
+        }
+        #box2{
+            background-color: beige;
+            margin : 50px 0px;
+        /* margin은 상쇄되는 속성이 있다. 더 큰 값으로 흡수되어 상쇄. */
+        }
+        #box3{
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi cupiditate dolor error exercitationem fugit hic inventore iure minus molestiae nihil nulla odio odit, placeat possimus praesentium quae quam qui vel?
+    </div>
+    <div id="box2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque blanditiis enim minima non, numquam sunt? Accusamus dolores, est harum ipsum laboriosam, numquam quibusdam quod ratione repellendus vero vitae, voluptates?
+    </div>
+    <div id="box3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequatur cumque delectus et ex fugit impedit in ipsam itaque libero, magnam molestias nisi numquam omnis quam quia repudiandae temporibus vel.
+    </div>
+
+</body>
+</html>

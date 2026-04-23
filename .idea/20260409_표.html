@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>표 예제1</h3>
+    <table border="1">
+        <tr>
+            <td>열1</td>
+            <td>열2</td>
+            <td>열3</td>
+        </tr>
+        <tr>
+            <td>열1</td>
+            <td>열2</td>
+            <td>열3</td>
+        </tr>
+        <tr>
+            <td>열1</td>
+            <td>열2</td>
+            <td>열3</td>
+        </tr>
+    </table>
+
+<!-- deprecated : 더이상 사용되지 않음(권장되지 않음) --!>
+<h3>표 예제2</h3>
+    <table border="1">
+        <caption> 사람들 나이표 </caption>
+        <thead>
+            <tr>
+                <!-- 표 제목을 지정할 때는 th 사용 --!>
+                <th>이름</th>
+                <th>나이</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>박소하</td>
+            <td>만 34세</td>
+        </tr>
+        <tr>
+            <td>모모</td>
+            <td>만 32세</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td></td>
+            <!-- 한 칸을 비워둘 때는 그냥 td를 입력 --!>
+            <td>나이의 합 : 만 64세</td>
+        </tr>
+        </tfoot>
+    </table>
+
+<h3> 표 예제 3</h3>
+<table border="1" width="200">
+    <tr align="center">
+        <td>1</td>
+        <td colspan="2">2</td>
+<!--        <td>3</td>-->
+    </tr>
+    <tr align="center">
+        <td rowspan="2">4</td>
+        <td>5</td>
+        <td>6</td>
+    </tr>
+    <tr align="center">
+<!--        <td>7</td>-->
+        <td>8</td>
+        <td>9</td>
+    </tr>
+    <tr align="center">
+        <td colspan="3">10</td>
+<!--        <td>11</td>-->
+<!--        <td>12</td>-->
+    </tr>
+</table>
+
+<h1> 밴드 동아리 지원 양식</h1>
+<table border="1">
+    <caption> 동아리 지원서 </caption>
+    <tr>
+        <td style="background-color: lightslategray;" rowspan="3">테스트</td>
+        <td>이름</td>
+        <td>홍길동</td>
+    </tr>
+    <tr>
+<!--        <td>1</td>-->
+        <td>학과/학번</td>
+        <td>컴퓨터공학/20220101</td>
+    </tr>
+    <tr>
+<!--        <td>1</td>-->
+        <td>연락처</td>
+        <td>010-1234-5678</td>
+    </tr>
+    <tr>
+        <td style="background-color: lightslategray;">지원분야</td>
+        <td style="text-align : center" colspan="2">드럼</td>
+<!--        <td>1</td>-->
+    </tr>
+</table>
+
+
+
+</body>
+</html>

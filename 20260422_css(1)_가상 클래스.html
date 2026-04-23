@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>가상 클래스</title>
+</head>
+<style>
+    html{
+        /*스크롤 이동 시 부드럽게*/
+        scroll-behavior: smooth;
+    }
+    .btn{
+        background-color: lemonchiffon;
+        cursor: pointer;
+    }
+    /*버튼에 마우스 올리면 적용해줘*/
+    .btn:hover{
+        background-color: powderblue;
+        color: white;
+    }
+    /*버튼을 클릭하면 적용해줘*/
+    .btn:active{
+        background-color: cornflowerblue;
+    }
+    /*focusing 될 때(커서가 위치할 때)*/
+    input:focus{
+        background-color: cornflowerblue;
+        color: white;
+    }
+    input:disabled{
+        background-color: mediumpurple;
+    }
+    input:enabled{
+        background-color: aquamarine;
+        color: floralwhite;
+    }
+    a:link{
+        color: violet;
+    }
+    a:visited{
+        color: red;
+    }
+    /*어떤 요소라도 마우스를 올렸을 때 적용. 앞에 *을 붙일 수도 있고 생략할 수도 있다. */
+    :hover{
+        font-weight: bold;
+    }
+    #s1{
+        width: 200px;
+        height: 500px;
+        background-color: cornflowerblue;
+    }
+    #s2{
+        width: 200px;
+        height: 300px;
+        background-color: floralwhite;
+    }
+    #s3{
+        width: 200px;
+        height: 800px;
+        background-color: peachpuff;
+    }
+    /* 버튼인데 호버가 아닐 때 적용해줘 */
+    button:not(:hover){
+
+    }
+    /* btn클래스 이면서 a클래스를 가지고 있는 것을 선택하고 싶을 때 태그를 붙여서 쓴다. */
+    .btn.a{
+
+    }
+    /* 버튼인데 a클래스를 가지고 있지 않은 것을 선택하고 싶을 때 아래처럼 쓴다. */
+    button:not(.a){
+
+    }
+
+</style>
+<body>
+    <button class="btn">버튼</button><br>
+
+
+    <input type="text" value="test1"><br>
+<!--    readonly : 읽기만 가능 / disabled : 읽기, 값 둘 다 의미없음(비활성화 상태)  -->
+<!--    둘의 차이 : 스타일도 차이가 있지만 form 태그 안에서 차이가 확연히 드러난다.  -->
+    <input type="text" value="test2" readonly><br>
+    <input type="text" value="test3" disabled><br>
+
+<!--    방문 여부는 a 태그가 아니라 #(링크) 기준으로 색이 변화한다.  -->
+    <a href="#">이동하기1</a><br>
+    <a href="?">이동하기2</a><br>
+    <a href="#s1">SECTION1로 이동</a><br>
+    <a href="#s2">SECTION2로 이동</a><br>
+    <a href="#s3">SECTION3로 이동</a><br>
+    <br><br><br><br><br><br><br><br><br><br>
+    <section id="s1">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam animi beatae consectetur delectus dolores ipsa ipsum labore magnam minus modi natus numquam odio quasi quod quos, sed sint ut.
+    </section>
+    <section id="s2">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, assumenda atque deleniti dicta, doloremque doloribus eos esse est excepturi expedita iure laborum odio, quidem soluta sunt veritatis vero voluptates! Cum.
+    </section>
+    <section id="s3">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, dignissimos dolores dolorum, eaque eius esse facilis iure maxime nulla numquam obcaecati, perspiciatis possimus quas quia quo quod repudiandae sint voluptatibus!
+    </section>
+
+
+</body>
+</html>

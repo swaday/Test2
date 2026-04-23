@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>background</title>
+</head>
+<style>
+    button{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        overflow: hidden;
+        /*overflow hidden을 쓰지 않으면 요소가 튀어나와버림.*/
+        /*text-align: center;*/
+    }
+    img{
+        /*width: 100%;*/
+        /*height: 100%;*/
+    }
+    div {
+        /*한줄을 차지하지 말고 내부 button 크기만큼 가져라는 명령*/
+        display: inline-block;
+        position: relative;
+        /*자식에 absolute가 있으면 relative로 position을 정해주면 된다.*/
+    }
+        #b2{
+        display: inline-block;
+        border: 3px solid black;
+        border-top-color: gold;
+        border-left-color: chocolate;
+        border-right-color: powderblue;
+        border-bottom-color: blue;
+        cursor: pointer;
+        background-image: url(https://i.namu.wiki/i/54zac5lpIm6dl1ub_RoM5huTVuBkx4Drqwsg9SfXD7Xf1SCKRPWV3NbWdgRt2UmuEzPeoKVD-HNI8pS0DjwMWA.webp);
+        background-size: cover;
+        /*contain : 이미지 전체가 들어간다.(버튼 크기에 따라 여백이 생길 수 있음) cover : 이미지가 버튼에 맞게 들어간다.*/
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #b3{
+        display: inline-block;
+        width : 30px;
+        height : 30px;
+        border : none;
+        position : absolute;
+    /*  부모 위치 기준으로 자리를 잡는 명령어 : absolute  */
+    /*  부모를 정하는 기준 : position이 static이 아닌 부모를 찾아간다.  */
+        bottom : 0px;
+        right: -5px;
+        background-image: url("http://www.w3.org/2000/svg");
+        background-size: 50% 50%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    section{
+        overflow: auto;
+        /* 넘어가는 부분을 보여주기 위한 스크롤 생성 */
+        /* 그냥 scroll로도 가능한데, scroll은 가로, 세로 스크롤을 모두 생성. 가로 세로도
+        따로 생성할 수 있으나 auto로 하는 것이 간편하다. */
+        /* 다만 디자인할 때 스크롤이 예쁘지 않아서 스크롤은 되나 스크롤바가 보이지 않게 만들 수도 있다. */
+        width: 200px;
+        height: 100px;
+        background-color: lemonchiffon;
+    }
+</style>
+<body>
+    <button>
+        <img src="https://i.namu.wiki/i/54zac5lpIm6dl1ub_RoM5huTVuBkx4Drqwsg9SfXD7Xf1SCKRPWV3NbWdgRt2UmuEzPeoKVD-HNI8pS0DjwMWA.webp" alt="">
+
+    </button>
+
+    <div>
+        <button id="b2"></button>
+        <button id="b3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-camera-icon lucide-camera"><path d="M13.997 4a2 2 0 0 1 1.76 1.05l.486.9A2 2 0 0 0 18.003 7H20a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1.997a2 2 0 0 0 1.759-1.048l.489-.904A2 2 0 0 1 10.004 4z"/><circle cx="12" cy="13" r="3"/></svg>
+        </button>
+    </div>
+
+
+    <section>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloremque eius facilis itaque maxime necessitatibus numquam quo sed tenetur vel. Culpa doloribus hic incidunt modi molestiae porro quasi qui suscipit.
+    </section>
+
+</body>
+</html>

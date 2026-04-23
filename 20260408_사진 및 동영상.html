@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>사진 및 동영상</title>
+</head>
+<body>
+    <img width="1000" height="1500" src="data/tree.jpg" alt="">
+<!--    맥에서 경로 맨 앞에 /를 넣으면 최상위 경로라는 뜻 -->
+<!--    맥에서 경로 맨 앞에 .을 넣으면 현재 내위치 기준이라는 뜻-->
+<!--    width나 height 둘 중 하나만 쓰면 사진 비율 맞춰준다-->
+    <video width="1000" src="data/ocean.mp4" controls="속성" loop muted poster="data/tree.jpg"></video>
+<!-- 소리가 있을 때는 autoplay가 안될 수도 있기 때문에 muted를 해야하는 브라우저가 있을 수 있다.-->
+<!-- autoplay를 하려면 muted를 넣어야하는 정책이 있다. : 세트라고 생각 -->
+    <object width="2000" height="1000" data="data/제안용.pdf" type=""></object>
+    <embed src="data/제안용.pdf" type="application/pdf"></embed>
+
+
+    <a href="https://www.naver.com"> 네이버로 이동! </a><br>
+    <h1><a href=".idea/20260409_표.html"> 오늘 만든 표로 이동! </a><br> </h1>
+    <a href="data/tree.jpg" download="tree_soha"> 이미지로 이동! </a><br>
+    <a href="data/2018년%20제품목록.xlsx"> 엑셀 파일로 이동! </a><br>
+<!-- 엑셀파일, 한글파일 등은 브라우저에서 오픈이 안되므로 다운로드가 된다. 결국 다운로드 링크가 되는 셈-->
+<!-- 이미지를 오픈이 아닌 다운로드로 유도하고 싶다면 download 코드 사용-->
+<!-- 다운로드 코드 뒤에 속성값을 넣으면 다운로드 파일 이름이 된다.-->
+    <a href="https://www.naver.com">
+        <img height="1000" src="data/tree.jpg" alt="">
+    </a>
+
+    <button> <a href="https://www.naver.com"> 네이버로 가기 버튼! </button>
+<!-- 버튼은 a 태그와 잘 사용하지 않는다 : 버튼과 a 태그 사이의 공백을 누르면 링크 이동이 불가능하다는 단점-->
+
+
+<!-- 네이버 로그인 창 : html form 이용 -->
+<!-- 서버 컴퓨터와 데이터를 주고받는 행위가 form -->
+</body>
+</html>

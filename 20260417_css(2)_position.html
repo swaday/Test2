@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>position</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    div{
+        width: 100px;
+        height: 100px;
+    }
+    #d1{
+        position: relative;
+        /*position 속성은 요소를 이동시키는 것. margin과는 다르게 자신만 이동하므로 겹쳐지는 경우가 발생할 수 있다. -> 다른 요소 배치에 영향을 주지 않음.*/
+        /*기본값 = static이며, relative로 설정할 경우 원래 있던 위치에서 이동한다는 뜻*/
+        left: 100px; /*왼쪽으로부터 100px 정도 띄워라(오른쪽으로 100px 이동) 명령어 사용을 위해서는 position 필요, margin과의 차이점을 이해할 것*/
+        display: inline-block;
+        background-color: floralwhite;
+    }
+    #d2{
+        display: inline-block;
+        background-color: lemonchiffon;
+    }
+    #d3{
+        position: absolute;
+        /*absolute는 부모 위치를 기준으로 이동한다.*/
+        left: 100px;
+        background-color: cornsilk;
+    }
+    #d4{
+        background-color: peachpuff;
+    }
+    #d5{
+        position: absolute;
+        left: 50px;
+        background-color: mediumpurple;
+    }
+
+
+</style>
+<body>
+    <div id="d1">DIV1</div>
+    <div id="d2">DIV2</div>
+    <div id="d3">DIV3</div>
+    <div id="d4">DIV4
+        <div id="d5">DIV5</div>
+    </div>
+
+</body>
+</html>

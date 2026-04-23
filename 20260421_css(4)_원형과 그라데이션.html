@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>원형과 그라데이션</title>
+</head>
+<style>
+    div{
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
+    }
+    .grad1{
+        /*왼쪽 위에서 오른쪽 아래 방향으로, blue에서 white로*/
+        background : linear-gradient(to right bottom, blue, white);
+    }
+    .grad2{
+        /*오른쪽 위(45도) 방향으로 red에서 whithe로*/
+        background : linear-gradient(45deg, red, white);
+    }
+    .grad3{
+        /*위에서 아래로 gold에서 시작해서 30% 지점까지는 white로 변하고 그 이후로는 powderblue로 지정*/
+        background : linear-gradient(to bottom, gold, white 30%, powderblue);
+    }
+    .grad4{
+        width: 200px;
+        height: 400px;
+        /*타원형 방사형*/
+        background : radial-gradient(white, yellow, red);
+    }
+    .grad5{
+        width: 200px;
+        height: 400px;
+        /*정방형 방사형*/
+        background : radial-gradient(circle, white, yellow, red);
+    }
+    .grad6{
+        /*그라데이션 중심에서 가장 가까운 측면에 닿을 때까지*/
+        /*closeet-side : 측면, closest-corner: 꼭지점 */
+        background: radial-gradient(circle closest-corner at 90% 10%, white, yellow, green);
+    }
+    .grad7{
+        /*x : 20%,  y : 20% 위치에서 시작해서 흰색에서 파란색으로 변경*/
+        background: radial-gradient(circle at 20% 20%, white, blue);
+    }
+    .grad8{
+        background: repeating-linear-gradient(yellow, red 20px);
+    }
+    .grad9{
+        background: repeating-radial-gradient(circle, white, blue 10%);
+    }
+    .grad10{
+        background: repeating-radial-gradient(circle, white, white 10%, green 10%, blue 20%);
+    }
+
+
+</style>
+<body>
+    <div class="grad1"></div>
+    <div class="grad2"></div>
+    <div class="grad3"></div>
+    <div class="grad4"></div>
+    <div class="grad5"></div>
+    <div class="grad6"></div>
+    <div class="grad7"></div>
+    <div class="grad8"></div>
+    <div class="grad9"></div>
+    <div class="grad10"></div>
+
+
+</body>
+</html>

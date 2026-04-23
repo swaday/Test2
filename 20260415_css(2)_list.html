@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>목록</title>
+    <style>
+        ol{
+            border: 1px solid blue;
+        }
+        table{
+            width: 300px;
+            border: 3px solid violet;
+            border-collapse: collapse;
+            border-spacing: 5px;
+        }
+        td{
+            text-align: center;
+            width: 20px;
+            border: 2px lightgray solid;
+
+        }
+        .col1{
+            font-weight: bold;
+            color: bisque;
+            background-color: violet;
+        }
+        .table-name{
+            color: green;
+            font-weight: bold;
+            text-align: center;
+        }
+        .tfoot{
+            background-color: gray;
+            font-weight: bold;
+            text-align: center;
+        }
+        .table3{
+            width: 600px;
+            border: 2px black solid;
+            border-collapse: separate;
+            border-spacing: 3px;
+        }
+        .table3 th, td{
+            text-align: center;
+            width: 20px;
+            border: 1px black solid;
+            border-collapse: separate;
+            border-spacing: 3px;
+        }
+        .table1{
+            text-align: center;
+            caption-side: bottom;
+        }
+        .table3-thead{
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>UL_LI1</li>
+        <li>UL_LI2</li>
+        <li>UL_LI3</li>
+    </ul>
+    <ol type="I">
+        <li>OL_LI1</li>
+        <li>OL_LI2</li>
+        <li>OL_LI3</li>
+    </ol>
+
+    <hr>
+
+    <table class="table2">
+        <colgroup>
+            <col class="col1">
+            <col class="col2">
+            <col class="col3">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>구분</th>
+                <th>성인</th>
+                <th>독서자</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>종이책</td>
+                <td>6.1권</td>
+                <td>11.8권</td>
+            </tr>
+            <tr>
+                <td>전자책</td>
+                <td>1.2권</td>
+                <td>7.1권</td>
+            </tr>
+            <tr>
+                <td>오디오북</td>
+                <td>0.2권</td>
+                <td>5.5권</td>
+            </tr>
+        </tbody>
+        <caption class="table1">
+            2019 국민 도서실태
+        </caption>
+    </table>
+
+
+
+    <table class="table3">
+        <caption class="table-name">요안도라 객실</caption>
+        <thead class="table3-thead">
+            <tr>
+                <th>방이름</th>
+                <th>대상</th>
+                <th>크기</th>
+                <th>가격</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>유채방</td>
+            <td>여성 도미토리</td>
+            <td rowspan="3">4인실</td>
+            <td rowspan="4">1인 20,000원</td>
+        </tr>
+        <tr>
+            <td rowspan="2">동백방</td>
+            <td>동성 도미토리</td>
+<!--            <td>4인실</td>-->
+<!--            <td>1인 20,000원</td>-->
+        </tr>
+        <tr>
+<!--            <td>동백방</td>-->
+            <td>가족 1팀</td>
+<!--            <td>4인실</td>-->
+<!--            <td>1인 20,000원</td>-->
+        </tr>
+        <tr>
+            <td>천혜향방</td>
+            <td>-</td>
+            <td>2인실</td>
+<!--            <td>1인 20,000원</td>-->
+        </tr>
+        </tbody>
+        <tfoot class="tfoot">
+        <tr>
+            <td colspan="4">바깥채 전체를 렌트합니다.</td>
+        </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

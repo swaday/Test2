@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>box-model</title>
+    <style>
+        #d1{
+            border: 10px solid red;
+            box-sizing: border-box;
+            width: 400px;
+            background-color: beige;
+        }
+        #d2{
+            background-color: mediumaquamarine;
+            /*padding: 10px 20px;*/
+            /*2개 적으면 상하-좌우 순서로 패딩을 적용*/
+            /*4개 적으면 상>우>하>좌 순서로 패딩을 적용*/
+            /*css는 시계방향으로 적용된다고 생각*/
+            /*padding-top: 30px*/
+            /*box-sizing: border-box;*/
+            /*width: 700px*/
+            padding: 10px;
+            width: 200px;
+            border: 10px beige solid;
+            box-sizing: border-box;
+            box-shadow: 5px 5px 0px 0px olivedrab;
+        }
+        span{
+            width: 10000px;
+            background-color: teal;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi consectetur eius iure libero necessitatibus placeat tempore! Adipisci aliquam animi assumenda, at excepturi neque repellendus sed similique sunt. Alias, animi perspiciatis.</div>
+    <div id="d2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda autem cumque dolorem, eum ex, explicabo fuga ipsam iste laboriosam nesciunt nihil odio praesentium quam recusandae similique totam veniam voluptatem voluptatum.</div>
+    <span>span 태그입니다.</span>
+<!--span 태그는 하단에 위치하게 된다.-->
+    <div>div 태그입니다.</div>
+</body>
+</html>
