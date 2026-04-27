@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>animation</title>
+</head>
+<style>
+    .box1{
+        width: 200px;
+        height: 200px;
+        background-color: bisque;
+        /*right_move 애니메이션을 적용한다.*/
+        animation-name: right_move;
+        /*몇 초 동안 할건지 정의(일회용)*/
+        animation-duration: 1s;
+        /*애니메이션을 몇 번 반복할건지 지정하는 명령어 - infinite : 무한대*/
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    /*keyframe에 애니메이션 이름을 정의*/
+    @keyframes right_move{
+        /*from은 시작할 때 스타일, to는 목표 스타일*/
+        from{}
+        to{
+            background-color: aquamarine;
+            transform : translateX(500px);
+        }
+    }
+    .box2{
+        width: 300px;
+        height: 300px;
+        background-color: azure;
+        animation-name: move;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    @keyframes move{
+        from{
+            background-color: aqua;
+        }
+        50%{
+            background-color: blue;
+            transform : translateY(500px);
+        }
+        to{
+            background-color: cornflowerblue;
+            transform : translateX(500px);
+        }
+
+    }
+</style>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>

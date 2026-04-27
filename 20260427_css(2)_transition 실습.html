@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transition 실습</title>
+</head>
+<style>
+    .container{
+        text-align: center;
+    }
+    .item{
+        display: inline-block;
+        position: relative;
+        width: 400px;
+        height: 600px;
+        background-image : url("https://plus.unsplash.com/premium_photo-1776794651391-68a4108c40aa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzM3x8fGVufDB8fHx8fA%3D%3D");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        overflow: hidden; /*자신을 벗어난 자식들은 보이지 않게 해줘*/
+    }
+    .info{
+        text-align: left;
+        position: absolute;
+        top : 600px;
+        /*%는 부모에 맞춰서 크기를 정하는 것*/
+        width: 400px;
+        height: 100%;
+        padding : 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+        transition-duration: 1s;
+        /*border와 padding만큼 사이즈가 커지기 때문에 맞춰주는 작업이 필요*/
+        box-sizing: border-box;
+    }
+    .item:hover > .info{
+        top: 0;
+    }
+    .info > h3{
+        color: white;
+        font-size: 2em;
+        margin-top: unset;
+    }
+    .info > p{
+        color: white;
+    }
+</style>
+<body>
+    <div class="container">
+        <h1>상품목록</h1>
+        <section class="item">
+        <div class="info">
+            <h3> Film </h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus, adipisci aliquam commodi eum eveniet facilis hic ipsa iure laboriosam non odio omnis quibusdam quos rem soluta tempore vitae voluptates.</p>
+        </div>
+    </section>
+        <section class="item">
+        <div class="info">
+            <h3> Film </h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus, adipisci aliquam commodi eum eveniet facilis hic ipsa iure laboriosam non odio omnis quibusdam quos rem soluta tempore vitae voluptates.</p>
+        </div>
+    </section>
+        <section class="item">
+        <div class="info">
+            <h3> Film </h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus, adipisci aliquam commodi eum eveniet facilis hic ipsa iure laboriosam non odio omnis quibusdam quos rem soluta tempore vitae voluptates.</p>
+        </div>
+    </section>
+    </div>
+
+</body>
+</html>
