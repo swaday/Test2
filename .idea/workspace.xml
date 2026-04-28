@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0939204-d1de-45d6-bd66-0bcfce7684e8" name="변경" comment="20260423 update">
-      <change afterPath="$PROJECT_DIR$/20260427_css(1)_animation.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20260427_css(2)_transition 실습.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20260427_css(3)_Flex Box.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20260427_css(4)_정렬.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20260427_css(5)_flex box 연습.html" afterDir="false" />
+    <list default="true" id="d0939204-d1de-45d6-bd66-0bcfce7684e8" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/20260428_csS(4)_card.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20260428_css(1)_svg.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20260428_css(2)_반응형 웹.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20260428_css(3)_news.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20260428_css(5)_부트스트랩.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/calculator.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/20260427_css(5)_flex box 연습.html" beforeDir="false" afterPath="$PROJECT_DIR$/20260427_css(5)_flex box 연습.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,12 +35,12 @@
     &quot;assignee&quot;: &quot;swaday&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/swaday/Test2.git",
-    "accountId": "dcb3bff1-4493-4668-85e8-bda4ce81f181"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/swaday/Test2.git&quot;,
+    &quot;accountId&quot;: &quot;dcb3bff1-4493-4668-85e8-bda4ce81f181&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7,
   &quot;fromUser&quot;: false
@@ -48,28 +50,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "master",
-    "javascript.preferred.runtime.type.id": "node",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/Users/d/Desktop/박소하/Test2",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/d/Desktop/박소하/Test2&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\d\Desktop\박소하\Test2" />
+      <recent name="C:\Users\d\Desktop\박소하\Test2\font" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -87,7 +95,8 @@
       <workItem from="1776923478128" duration="76000" />
       <workItem from="1776923630507" duration="7000" />
       <workItem from="1776923651326" duration="21000" />
-      <workItem from="1777249190983" duration="10840000" />
+      <workItem from="1777249190983" duration="11668000" />
+      <workItem from="1777334335056" duration="14107000" />
     </task>
     <task id="LOCAL-00001" summary="20260423 update">
       <option name="closed" value="true" />
@@ -105,7 +114,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776923498895</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="20260423 update">
+      <option name="closed" value="true" />
+      <created>1777261909085</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1777261909085</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

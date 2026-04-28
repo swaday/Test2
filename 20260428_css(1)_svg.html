@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>svg</title>
+    <style>
+        svg.bi{
+            width: 100px;
+            height: 100px;
+            fill: dimgray;
+            /*stroke-width: 1px;*/
+            /*stroke-dasharray: 2px;*/
+        }
+        .draw-path{
+            /*선의 총 길이를 점선 간격으로*/
+            stroke-dasharray: 100;
+            /*선이 그려지는 효과 - 패턴이 시작되는 위치 결정 : 양수값을 주면 패턴을 왼쪽(앞쪽)으로 밀어낸다.*/
+            /*실선 부분을 앞으로 500만큼 밀어서 눈앞에 500만큼의 공백을 만든다.*/
+            stroke-dashoffset: -500;
+            animation: draw 5s linear forwards infinite;
+            stroke: #dfdf31;
+            stroke-width: 5;
+            fill: none;
+        }
+        @keyframes draw {
+            to{
+                stroke-dashoffset: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-calculator" viewBox="0 0 16 16">
+    <path d="M12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+    <path d="M4 2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5zm0 4a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"/>
+</svg>
+<svg>
+    <rect x="10" y="10" width="150" height="150" class="draw-path"></rect>
+</svg>
+</body>
+</html>
