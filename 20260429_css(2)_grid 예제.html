@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid 예제</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .card-list{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    li{
+        width: 100%;
+        height: 500px;
+        list-style: none;
+        margin: 10px;
+        /*padding: 10px;*/
+    }
+    img{
+        width: 100%;
+        height: 200px;
+        border-radius: 10%;
+    }
+    img:hover{
+        transform: scale(1.2);
+    }
+    .card .picture-card{
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        border-radius: 10%;
+    }
+    .info-card{
+        padding: 5px;
+    }
+    .title-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .new{
+        font-size: 10px;
+        font-weight: bold;
+        text-align: right;
+    }
+    .title-container .name{
+        font-weight: bold;
+    }
+    .info{
+        font-size: 13px;
+        color: dimgray;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    /*  white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; 자동으로 말 줄임표 넣기  */
+    }
+    .day{
+        font-size: 13px;
+        color: dimgray;
+    }
+    .price-container{
+        display: flex;
+    }
+    .total{
+        margin-right: 10px;
+        color: #3c3c3c;
+    }
+    .price{
+        font-weight: bold;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+        text-decoration-skip-ink: none;
+    }
+    .tag-container{
+        display: flex;
+    }
+    .tag{
+        background-color: lightgray;
+        color: #8c8c8c;
+        margin: 3px;
+        padding: 2px;
+        font-size: 10px;
+        /*font-weight: lighter;*/
+        border-radius: 3px;
+    }
+    .card{
+        position: relative;
+    }
+    .card-top{
+        width: 100%;
+        height: 200px;
+        position: relative;
+    }
+    .icon-container{
+        position: absolute;
+        top: 5px;
+        right: 2px;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        z-index: 10;
+        background-color: transparent;
+        border-radius: 50%;
+        color: #f3f3f3;
+    }
+    i{
+        font-size: 22px;
+        cursor: pointer;
+        display: inline-block;
+        transition: transform 0.2s ease, color 0.2s ease;
+    }
+    i:hover{
+        color: #b6b6b6;
+        transform: scale(1.05);
+    }
+    .indicator{
+        position: absolute;
+        width: 100%;
+        top: 170px;
+        text-align: center;
+        z-index: 10;
+    }
+    .indicator > button{
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        color: #b6b6b6;
+        border: none;
+        border-radius: 50%;
+        margin: 1px;
+        z-index: 10;
+    }
+</style>
+<body>
+    <ul class="card-list">
+        <li class="card">
+            <section class="card-top">
+                <div class="icon-container">
+                    <i class="bi bi-heart"></i>
+                </div>
+                <div class="indicator">
+                    <button></button>
+                    <button></button>
+                    <button></button>
+                    <button></button>
+                </div>
+                <div class="picture-card">
+                    <img src="https://a0.muscache.com/im/pictures/miso/Hosting-53595778/original/4dbec59d-b68e-4678-8899-e3e03b9a6b93.jpeg?im_w=720" alt="">
+                </div>
+            </section>
+            <section class="info-card">
+                <div class="title-container">
+                    <b class="name"> 강릉시의 집 </b>
+                    <span class="new"> &#10029; 신규 </span>
+                </div>
+                <p class="info"> 라온- #즐거운 #쾌적한 #넓은 #편안한 #한지그림갤러리 숙소에서 #... </p>
+                <p class="day"> 5월 10일 ~ 15일 </p>
+                <div class="price-container">
+                    <p class="total"> 총액 </p>
+                    <p class="price"> &#8361;800,000 </p>
+                </div>
+                <div class="tag-container">
+                    <p class="tag"> 오늘 &#8361;0 결제 </p>
+                    <p class="tag"> 취소 수수료 없음 </p>
+                </div>
+            </section>
+        </li>
+        <li class="card">
+            <div class="icon-container">
+                <i class="bi bi-heart"></i>
+            </div>
+            <div class="picture-card">
+                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1572067968888105232/original/293734ac-b766-4416-bc04-4194e4d9d0c8.jpeg?im_w=720" alt="">
+            </div>
+            <section class="info-card">
+                <div class="title-container">
+                    <b class="name"> 강릉시의 집 </b>
+<!--                    <span class="new"> &#10029; 신규 </span>-->
+                </div>
+                <p class="info"> 탁 트인 인생오션뷰 / 바다품은 프라이빗 하우스 </p>
+                <p class="day"> 5월 9일 ~ 14일 </p>
+                <div class="price-container">
+                    <p class="total"> 총액 </p>
+                    <p class="price"> &#8361;1,388,993 </p>
+                </div>
+                <div class="tag-container">
+                    <p class="tag"> 오늘 &#8361;0 결제 </p>
+                    <p class="tag"> 취소 수수료 없음 </p>
+                </div>
+            </section>
+        </li>
+        <li class="card">
+            <div class="icon-container">
+                <i class="bi bi-heart"></i>
+            </div>
+            <div class="picture-card">
+                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1576458545322097475/original/ff8bffd2-0982-4e35-9541-fb074e1c067a.jpeg?im_w=720" alt="">
+            </div>
+            <section class="info-card">
+                <div class="title-container">
+                    <b class="name"> 강릉시의 아파트 </b>
+<!--                    <span class="new"> &#10029; 신규 </span>-->
+                </div>
+                <p class="info"> 강릉 4성급 레지던스 호텔 #쓰리룸 #감성숙소 #독채 </p>
+                <p class="day"> 5월 17일 ~ 22일 </p>
+                <div class="price-container">
+                    <p class="total"> 총액 </p>
+                    <p class="price"> &#8361;796,130 </p>
+                </div>
+<!--                <div class="tag-container">-->
+<!--                    <p class="tag"> 오늘 &#8361;0 결제 </p>-->
+<!--                    <p class="tag"> 취소 수수료 없음 </p>-->
+<!--                </div>-->
+            </section>
+        </li>
+        <li class="card">
+            <section class="card-top">
+                <div class="icon-container">
+                    <i class="bi bi-heart"></i>
+                </div>
+                <div class="indicator">
+                    <button></button>
+                    <button></button>
+                    <button></button>
+                    <button></button>
+                </div>
+                <div class="picture-card">
+                    <img src="https://a0.muscache.com/im/pictures/miso/Hosting-53595778/original/4dbec59d-b68e-4678-8899-e3e03b9a6b93.jpeg?im_w=720" alt="">
+                </div>
+            </section>
+            <section class="info-card">
+                <div class="title-container">
+                    <b class="name"> 강릉시의 집 </b>
+                    <span class="new"> &#10029; 신규 </span>
+                </div>
+                <p class="info"> 라온- #즐거운 #쾌적한 #넓은 #편안한 #한지그림갤러리 숙소에서 #... </p>
+                <p class="day"> 5월 10일 ~ 15일 </p>
+                <div class="price-container">
+                    <p class="total"> 총액 </p>
+                    <p class="price"> &#8361;800,000 </p>
+                </div>
+                <div class="tag-container">
+                    <p class="tag"> 오늘 &#8361;0 결제 </p>
+                    <p class="tag"> 취소 수수료 없음 </p>
+                </div>
+            </section>
+        </li>
+        <li class="card">
+            <div class="icon-container">
+                <i class="bi bi-heart"></i>
+            </div>
+            <div class="picture-card">
+                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1572067968888105232/original/293734ac-b766-4416-bc04-4194e4d9d0c8.jpeg?im_w=720" alt="">
+            </div>
+            <section class="info-card">
+                <div class="title-container">
+                    <b class="name"> 강릉시의 집 </b>
+                    <!--                    <span class="new"> &#10029; 신규 </span>-->
+                </div>
+                <p class="info"> 탁 트인 인생오션뷰 / 바다품은 프라이빗 하우스 </p>
+                <p class="day"> 5월 9일 ~ 14일 </p>
+                <div class="price-container">
+                    <p class="total"> 총액 </p>
+                    <p class="price"> &#8361;1,388,993 </p>
+                </div>
+                <div class="tag-container">
+                    <p class="tag"> 오늘 &#8361;0 결제 </p>
+                    <p class="tag"> 취소 수수료 없음 </p>
+                </div>
+            </section>
+        </li>
+        <li class="card">
+            <div class="icon-container">
+                <i class="bi bi-heart"></i>
+            </div>
+            <div class="picture-card">
+                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1576458545322097475/original/ff8bffd2-0982-4e35-9541-fb074e1c067a.jpeg?im_w=720" alt="">
+            </div>
+            <section class="info-card">
+                <div class="title-container">
+                    <b class="name"> 강릉시의 아파트 </b>
+                    <!--                    <span class="new"> &#10029; 신규 </span>-->
+                </div>
+                <p class="info"> 강릉 4성급 레지던스 호텔 #쓰리룸 #감성숙소 #독채 </p>
+                <p class="day"> 5월 17일 ~ 22일 </p>
+                <div class="price-container">
+                    <p class="total"> 총액 </p>
+                    <p class="price"> &#8361;796,130 </p>
+                </div>
+                <!--                <div class="tag-container">-->
+                <!--                    <p class="tag"> 오늘 &#8361;0 결제 </p>-->
+                <!--                    <p class="tag"> 취소 수수료 없음 </p>-->
+                <!--                </div>-->
+            </section>
+        </li>
+    </ul>
+</body>
+</html>

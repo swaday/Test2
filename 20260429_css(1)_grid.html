@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid layout</title>
+</head>
+<style>
+    .con1{
+        display: grid;
+        /*grid는 수직으로 나열시키는 성격 / flex는 수평으로 나열시키는 성격*/
+        /*flex는 작아지면 다음줄로 이동하지만 grid는 작아지다가 다음줄로 이동해서 반응형으로 유리*/
+        background-color: aliceblue;
+        grid-template-columns: 100px 200px 300px;
+        /*3개의 열을 정의 : 각 열이 100, 200, 300px을 가진다는 의미*/
+        /*column에 적는 만큼 열의 가로길이가 결정된다.*/
+        grid-template-rows: 100px 200px;
+        /*2개의 행을 정의 : 각 행이 100, 200px을 가진다는 의미*/
+        /*rows에 적는 만큼 행의 높이가 결정된다.*/
+    }
+    .con1 .item{
+        background: bisque;
+    }
+    .con2{
+        display: grid;
+        width: 600px;
+        background-color: aquamarine;
+        grid-template-columns: repeat(3, 1fr);
+        /*fr : 전체에서의 비율을 의미한다.*/
+    }
+    .con2 .item{
+        background-color: coral;
+    }
+    /****************************************************************************/
+
+    .con3{
+        width : 1200px;
+        display: grid;
+        background-color: darkgrey;
+        /*grid-template-columns: repeat(3, minmax(100px, auto));*/
+        /*minmax : 최소 크기를 정하고 최대 크기도 정하고 싶다.*/
+        /*minmax(100px, auto) : 최소 100px을 가져야하고, 최대 크기는 컨테이너 크기에 맞게 자동으로 늘어나겠다는 의미*/
+        grid-template-columns: repeat(auto-fill, minmax(20%, auto));
+        /*auto-fill : 개수를 정하지 않고 container에 설정된 너비가 허용하는 한 item으로 채우겠다.*/
+        /*auto-fill : item 개수가 작아서 공간이 남으면 공간이 빈다.*/
+        /*auto-fit : 공간이 비지 않게 item 크기를 늘려 채운다.*/
+    }
+    .con3 .item{
+        background-color: aquamarine;
+    }
+    .con4{
+        display: grid;
+        background-color: cornflowerblue;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+    .con4 .item{
+        background-color: aqua;
+    }
+    .con5{
+        display: grid;
+        background-color: aquamarine;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+    .con5 .item{
+        background-color: cornsilk;
+    }
+    .con5 .item:nth-child(1){
+        grid-column-start: 1;
+        grid-column-end: 3;
+        /*1~3까지 차지해라*/
+    }
+    .con5 .item:nth-child(2){
+        /*grid-column-start: 3;*/
+        /*grid-column-end: 4;*/
+        grid-column: 3 / 4;
+        /*1~3까지 차지해라 : 두가지 방법의 작성법이 있음.*/
+    }
+    .con5 .item:nth-child(3){
+        /*grid-column-start: 1;*/
+        /*grid-column-end: 2;*/
+        /*grid-row-start: 2;*/
+        /*grid-row-end: 4;*/
+        grid-column : 2 / span 2; /* 2번부터 2칸 차지해라는 뜻*/
+        grid-row : 2 / span 2; /* 2번부터 2칸 차지해라는 뜻*/
+    }
+    .con6{
+        display: grid;
+        text-align: center;
+        grid-gap: 10px;
+        background-color: aquamarine;
+        grid-template-columns: 300px 1fr 300px;
+        grid-template-areas:
+                'header header header'
+                'sidebar1 main sidebar2'
+                'footer footer footer';
+    }
+    .con6 .item{
+        background-color: cornsilk;
+    }
+    /*grid-template-area에 작성한 이름을 요소에 부여하는 작업이 필요*/
+    .con6 .header{
+        grid-area: header;
+    }
+    .con6 .sidebar1{
+        grid-area: sidebar1;
+    }
+    .con6 .sidebar2{
+        grid-area: sidebar2;
+    }
+    .con6 .main{
+        grid-area: main;
+    }
+    .con6 .footer{
+        grid-area: footer;
+    }
+</style>
+<body>
+    <h3>CON1</h3>
+<!--다중입력 명령어 : section.con1>div.item{ITEM$}*5-->
+    <section class="con1">
+        <div class="item">ITEM1</div>
+        <div class="item">ITEM2</div>
+        <div class="item">ITEM3</div>
+        <div class="item">ITEM4</div>
+        <div class="item">ITEM5</div>
+    </section>
+    <h3>CON2</h3>
+    <section class="con2">
+        <div class="item">ITEM1</div>
+        <div class="item">ITEM2</div>
+        <div class="item">ITEM3</div>
+        <div class="item">ITEM4</div>
+        <div class="item">ITEM5</div>
+    </section>
+    <h3>CON3</h3>
+    <section class="con3">
+        <div class="item">ITEM1</div>
+        <div class="item">ITEM2</div>
+        <div class="item">ITEM3</div>
+        <div class="item">ITEM4</div>
+        <div class="item">ITEM5</div>
+    </section>
+    </section>
+    <h3>CON4</h3>
+    <section class="con4">
+        <div class="item">ITEM1</div>
+        <div class="item">ITEM2</div>
+        <div class="item">ITEM3</div>
+        <div class="item">ITEM4</div>
+        <div class="item">ITEM5</div>
+        <div class="item">ITEM6</div>
+        <div class="item">ITEM7</div>
+        <div class="item">ITEM8</div>
+        <div class="item">ITEM9</div>
+        <div class="item">ITEM10</div>
+    </section>
+    <h3>CON5</h3>
+    <section class="con5">
+        <div class="item">ITEM1</div>
+        <div class="item">ITEM2</div>
+        <div class="item">ITEM3</div>
+        <div class="item">ITEM4</div>
+        <div class="item">ITEM5</div>
+        <div class="item">ITEM6</div>
+        <div class="item">ITEM7</div>
+        <div class="item">ITEM8</div>
+        <div class="item">ITEM9</div>
+        <div class="item">ITEM10</div>
+        <div class="item">ITEM11</div>
+        <div class="item">ITEM12</div>
+    </section>
+
+    <h3>CON5</h3>
+    <section class="con6">
+        <div class="item header">HEADER</div>
+        <div class="item sidebar1">SIDEBAR</div>
+        <div class="item main">MAIN</div>
+        <div class="item sidebar2">SIDEBAR</div>
+        <div class="item footer">FOOTER</div>
+    </section>
+</body>
+</html>
